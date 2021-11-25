@@ -4,15 +4,15 @@ app=Flask(__name__)
 
 
 #calling function from fla
-@app.route("/signup")
+@app.route("/")
 def signup():
     # return "world"
     return render_template("signup.html")
 
-@app.route("/login")
-def login():
-    # return "world"
-    return render_template("login.html")    
+# @app.route("/login")
+# def login():
+#     # return "world"
+#     return render_template("login.html")    
 
 if __name__ == '__main__':
     app.run()
