@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+    <title>SignUP page</title>
+</head>
+<body>
+<label>Username : </label>   
+<input type="text" placeholder="Enter Username" (keyup)="onKey($event,'username')"> 
+<p *ngIf="!valid.username" class="text-red-500 text-xs italic">username should morethan 5 characters</p>
+<label>Email: </label>
+<input type="text" placeholder="Enter Email" (keyup)="onKey($event,'email')" >
+<p *ngIf="!valid.email" class="text-red-500 text-xs italic">Your email is incorrect</p>
+<label>Password : </label>
+<input
+type="password"
+placeholder="Enter Password"
+(keyup)="onKey($event,'password')"
+
+/>
+<!-- <p *ngIf="!valid.password" class="text-red-500 text-xs italic">Your email is incorrect</p> -->
+<label> ConfirmPassword : </label>
+<input
+type="password"
+placeholder="Enter ConfirmPassword"
+(keyup)="onKey($event,'confirmPassword')"
+
+/>
+<p *ngIf="!valid.password" class="text-red-500 text-xs italic">password doesn't match</p>
+<p>Passwords must contain at least eight characters, including at least 1 letter and 1 number.</p>
+<br />
+<!-- Forgot <a href="#"> password? </a>  -->
+<button  routerLink ="/login" type="submit">Submit</button>
+<br />
+<!-- <input type="checkbox" checked="checked" /> Remember me
+<button type="button" class="cancelbtn">Cancel</button> -->
+<!-- Forgot <a href="#"> password? </a> -->
+By clicking “Sign up”, you agree to our <a href=".">terms of service,privacy policy</a>
+</div>
+</body>
+</html>
